@@ -1,30 +1,22 @@
+import { GET_JOBS} from '../actions'
+
 const initialState = {
   favourite: {
     list: [],
   },
 }
 
-const mainReducer = (state = initialState, action) => {
+const jobsReducer = (state = initialState, action) => {
   switch (action.type) {
-    case 'ADD_TO_FAVOURITE':
+    case GET_JOBS:
       return {
         ...state,
-        favourite: {
-          ...state.favourite,
-          list: [...state.favourite.list, action.payload],
-        },
+        available: action.payload,
       }
-    case 'REMOVE_FROM_FAVOURITE':
-      return {
-        ...state,
-        favourite: {
-          ...state.favourite,
-          list: state.favourite.list.filter((fav) => fav !== action.payload),
-        },
-      }
+
     default:
       return state
   }
 }
 
-export default mainReducer
+export default jobsReducer
