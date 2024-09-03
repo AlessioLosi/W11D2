@@ -11,7 +11,7 @@ export const addToFavouriteAction = (data) => {
 
   export const removeToFavouriteAction = (i) => {
     return {
-      type: REMOVE_TO_CART,
+      type: REMOVE_TO_FAVOURITE,
       payload: i, 
     }
   }

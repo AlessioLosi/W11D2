@@ -1,4 +1,4 @@
-import { GET_JOBS} from '../actions'
+import { GET_JOBS } from "../actions/actions"
 
 const initialState = {
   favourite: {
